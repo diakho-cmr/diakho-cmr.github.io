@@ -10,7 +10,7 @@ permalink: /
 
 ## Références projets
 
-### Depuis mars 2024 · Galileo Global Education (groupe privée)
+### Depuis mars 2024 · Galileo Global Education (groupe privé)
 
 #### Refonte technique et graphique du site de l'école HETIC
 Projet de refonte complète du site de l'école sur Drupal 10, avec modernisation de l'architecture et mise en place d'une gestion de contenus flexible via Group CMS et Layout Builder.
