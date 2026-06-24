@@ -1,3 +1,6 @@
+---
+---
+
 # Diakho CAMARA
 **Développeuse Drupal fullstack confirmée**  
 [diakho.camara@gmail.com](mailto:diakho.camara@gmail.com) &nbsp;|&nbsp; [0631003506](tel:+33631003506)
@@ -11,7 +14,7 @@
 #### Refonte technique et graphique du site de l'école HETIC
 Projet de refonte complète du site de l'école sur Drupal 10, avec modernisation de l'architecture et mise en place d'une gestion de contenus flexible via Group CMS et Layout Builder.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Mise en place des briques de base Drupal : contrib modules, nodes, blocks, menus, taxonomies, views.
@@ -25,7 +28,7 @@ Projet de refonte complète du site de l'école sur Drupal 10, avec modernisatio
 #### Middleware offres d'emploi
 Développement d'un middleware en Drupal 10 servant de passerelle entre différents sites pour la centralisation et l'exposition des offres d'emploi via API, avec une attention particulière à l'optimisation SEO.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Déploiement du middleware Drupal 10 (système de configuration, Composer, features, Drush, etc.).
@@ -43,7 +46,7 @@ Développement d'un middleware en Drupal 10 servant de passerelle entre différe
 #### Migration PHP 7.4 — sites écoles Drupal 7
 Mise à niveau technique de plusieurs sites Drupal 7 dans le cadre d'une migration vers PHP 7.4, incluant la compatibilité des modules et la sécurité des plateformes.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Audit des modules contrib et custom pour identifier les incompatibilités avec PHP 7.4.
@@ -59,7 +62,7 @@ Mise à niveau technique de plusieurs sites Drupal 7 dans le cadre d'une migrati
 #### Bloc "Hot Content" — mise en avant de contenus configurables
 Module Drupal fournissant un bloc configurable en back office permettant aux éditeurs de sélectionner et filtrer dynamiquement des contenus mis en avant. Le module repose sur une introspection automatique des champs du bundle cible pour générer les options de filtrage sans configuration statique.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Développement d'un service métier (`HotContentManager`) : détection automatique du bundle le plus peuplé via requête SQL directe, introspection des champs `entity_reference`, requêtage par conditions dynamiques et chargement des options de sélection.
@@ -75,12 +78,12 @@ Module Drupal fournissant un bloc configurable en back office permettant aux éd
 ---
 
 #### Bloc "Video Hub" — vidéothèque paginée avec données structurées Schema.org
-Module Drupal fournissant une vidéothèque paginée en front end, avec injection automatique de données structurées Schema.org (`ItemList` + `VideoObject`) en `&lt;head&gt;` pour le référencement, extraction automatique de la durée des vidéos et provisionnement programmatique du type de médias à l'installation.
+Module Drupal fournissant une vidéothèque paginée en front end, avec injection automatique de données structurées Schema.org (`ItemList` + `VideoObject`) en `<head>` pour le référencement, extraction automatique de la durée des vidéos et provisionnement programmatique du type de médias à l'installation.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
-- Plugin Block (`VideoHubBlock`) avec pagination Drupal native, mode d'affichage dédié (`video_hub`) et génération de JSON-LD Schema.org injecté dynamiquement en `&lt;head&gt;`.
+- Plugin Block (`VideoHubBlock`) avec pagination Drupal native, mode d'affichage dédié (`video_hub`) et génération de JSON-LD Schema.org injecté dynamiquement en `<head>`.
 - Service `VideoHubManager` : récupération paginée via `PagerManagerInterface`, compilation des données template (URLs, dates formatées en français, durées ISO 8601) et construction des données Schema.org.
 - Service `VideoMediaInstaller` exécuté à l'installation : détection ou création du type de médias vidéo, création programmatique des quatre champs requis, mode d'affichage et configuration des formulaires (avec support `field_group`).
 - `hook_media_presave` pour l'extraction automatique de la durée via `getID3`, avec protection contre les ré-extractions inutiles.
@@ -95,7 +98,7 @@ Module Drupal fournissant une vidéothèque paginée en front end, avec injectio
 #### Entité "Service externe" et intégration Avis Vérifiés (Skeepers)
 Module Drupal combinant une entité de contenu personnalisée pour centraliser la gestion des services tiers (widgets, avis) et une intégration complète avec l'API Skeepers Verified Reviews : authentification OAuth2, récupération des notes de marque et injection de données structurées Schema.org `AggregateRating`.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Entité `ExternalService` avec handlers complets (formulaires CRUD, list builder, contrôle d'accès, route provider) et interface d'administration (menus, onglets, permissions).
@@ -113,7 +116,7 @@ Module Drupal combinant une entité de contenu personnalisée pour centraliser l
 #### Extension Schema.org `Course` — propriétés metatag personnalisées
 Module Drupal étendant `schema_metatag` pour ajouter trois propriétés Schema.org manquantes dans le groupe `Course`, nécessaires au référencement des pages de formation des sites GGE.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Trois plugins `@MetatagTag` dans le groupe `schema_course` : `educationalLevel`, `timeRequired` (ISO 8601) et `teaches`.
@@ -128,7 +131,7 @@ Module Drupal étendant `schema_metatag` pour ajouter trois propriétés Schema.
 #### Intégration IndexNow — notification automatique des moteurs de recherche (Drupal 7)
 Développement de la fonctionnalité IndexNow au sein du module SEO GGE pour Drupal 7 : soumission automatique des URLs aux moteurs de recherche compatibles à chaque événement de cycle de vie d'un nœud.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Hooks `hook_node_insert`, `hook_node_update` et `hook_node_delete` avec filtrage par type de contenu activé.
@@ -144,7 +147,7 @@ Développement de la fonctionnalité IndexNow au sein du module SEO GGE pour Dru
 #### Synchronisation des produits de formation depuis Salesforce — Cours Florent
 Développement en équipe distribuée (dont un développeur anglophone) d'un module Drupal 10 assurant l'import automatique des produits de formation depuis l'API Salesforce vers une entité personnalisée, avec synchronisation planifiée par cron. Projet conduit entièrement en anglais.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Entité de contenu personnalisée `Product` avec handlers complets : storage, list builder, contrôle d'accès, Views data, route provider.
@@ -165,7 +168,7 @@ Développement en équipe distribuée (dont un développeur anglophone) d'un mod
 #### Refonte technique et graphique du site de la Mutuelle Familiale
 Refonte sous Drupal 10 avec un focus sur la modularité de la création de contenus et la facilité d'administration.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Mise en place des briques de base Drupal : contrib modules, nodes, blocks, menus, taxonomies, views.
@@ -181,7 +184,7 @@ Refonte sous Drupal 10 avec un focus sur la modularité de la création de conte
 #### Évolution du site Delphia Group Beneteau
 Développement sous Drupal 10 pour la création d'une architecture modulaire et flexible permettant aux équipes éditoriales de créer et organiser efficacement les contenus.
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Mise en place des briques de base Drupal : contrib modules, nodes, blocks, menus, taxonomies, views.
@@ -196,7 +199,7 @@ Développement sous Drupal 10 pour la création d'une architecture modulaire et 
 #### Refonte technique et graphique du site Terre de Vins
 Refonte complète sous WordPress 6 pour améliorer la visibilité et les conversions (abonnements numériques/papier, espaces publicitaires) et répondre à des besoins métier complexes (imports, gestion éditoriale).
 
-<details>
+<details markdown="1">
 <summary>Contributions</summary>
 
 - Mise en place des briques de base WordPress (custom post types, taxonomies, hooks, champs personnalisés).
