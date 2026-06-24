@@ -75,12 +75,12 @@ Module Drupal fournissant un bloc configurable en back office permettant aux éd
 ---
 
 #### Bloc "Video Hub" — vidéothèque paginée avec données structurées Schema.org
-Module Drupal fournissant une vidéothèque paginée en front end, avec injection automatique de données structurées Schema.org (`ItemList` + `VideoObject`) en `<head>` pour le référencement, extraction automatique de la durée des vidéos et provisionnement programmatique du type de médias à l'installation.
+Module Drupal fournissant une vidéothèque paginée en front end, avec injection automatique de données structurées Schema.org (`ItemList` + `VideoObject`) en `&lt;head&gt;` pour le référencement, extraction automatique de la durée des vidéos et provisionnement programmatique du type de médias à l'installation.
 
 <details>
 <summary>Contributions</summary>
 
-- Plugin Block (`VideoHubBlock`) avec pagination Drupal native, mode d'affichage dédié (`video_hub`) et génération de JSON-LD Schema.org injecté dynamiquement en `<head>`.
+- Plugin Block (`VideoHubBlock`) avec pagination Drupal native, mode d'affichage dédié (`video_hub`) et génération de JSON-LD Schema.org injecté dynamiquement en `&lt;head&gt;`.
 - Service `VideoHubManager` : récupération paginée via `PagerManagerInterface`, compilation des données template (URLs, dates formatées en français, durées ISO 8601) et construction des données Schema.org.
 - Service `VideoMediaInstaller` exécuté à l'installation : détection ou création du type de médias vidéo, création programmatique des quatre champs requis, mode d'affichage et configuration des formulaires (avec support `field_group`).
 - `hook_media_presave` pour l'extraction automatique de la durée via `getID3`, avec protection contre les ré-extractions inutiles.
